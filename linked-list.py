@@ -9,8 +9,14 @@ OPERATIONS FOR OUR LINKED LIST:
 # Let's get this bread ???? :)
 
 class Node(object):
-    def __init__(self, value, next=None):
-        self.value = value
-        self.next_node = next
+    def __init__(self, data, next_node=None):
+        self.data = data
+        self.next_node = next_node
     def get_next(self):
         return self.next_node
+    def set_next(self):
+        self.next_node = next_node
+    def get_data(self):
+        return self.data
+    def set_data(self):
+        self.data = data
