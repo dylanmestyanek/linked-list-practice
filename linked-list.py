@@ -66,3 +66,11 @@ class LinkedList(object):
                 this_node = this_node.get_next()
         return None
         
+practiceList = LinkedList()
+practiceList.add(2)
+practiceList.add(6)
+practiceList.add(13)
+print("[FOUND THE VALUE]:", practiceList.find(6))
+print("[CURRENT SIZE]:", practiceList.get_size())
+print("[REMOVED VALUE 13]:", practiceList.remove(13))
+print("[SIZE AFTER VALUE REMOVAL]:", practiceList.get_size())
