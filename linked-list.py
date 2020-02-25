@@ -14,18 +14,14 @@ class Node(object):
         self.next_node = next_node
 
     def get_next(self):
-        return self.next_node
-    
-    def set_next(self):
-        self.next_node = next_node
+        return self.next_node.data
     
     def get_data(self):
         return self.data
+
+    def set_next(self, next_node):
+        self.next_node = next_node
     
-    def set_data(self):
-        self.data = data
-
-
 class LinkedList(object):
     def __init__(self, root=None):
         self.root = root
@@ -67,9 +63,14 @@ class LinkedList(object):
         return None
         
 practiceList = LinkedList()
-practiceList.add(2)
-practiceList.add(6)
-practiceList.add(13)
+node1 = Node(1)
+node2 = Node(2)
+
+node1.set_next(node2)
+
+print("NODE1 NEXT", node1.get_next())
+
+
 print("[FOUND THE VALUE]:", practiceList.find(6))
 print("[CURRENT SIZE]:", practiceList.get_size())
 print("[REMOVED VALUE 13]:", practiceList.remove(13))
